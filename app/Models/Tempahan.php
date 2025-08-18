@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Tempahan extends Model
+{
+    protected $table = 'tempahan';
+    protected $fillable = [
+        'nama_penuh',
+        'bilik_makmal',
+        'tarikh'
+    ];
+}
