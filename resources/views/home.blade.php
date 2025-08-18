@@ -43,7 +43,7 @@
                             <td>{{ $booking->tarikh }}</td>
                             <td>
                                 <a href="{{ route('tempahan.edit', $booking->id) }}" class="btn btn-warning">Edit</a>
-                                <a href="" class="btn btn-danger">Hapus</a>
+                                <a href="{{ route('tempahan.delete', $booking->id) }}" class="btn btn-danger" onclick="return confirm('Adakah anda yakin untuk menghapus tempahan ini?')">Hapus</a>
                             </td>
                           </tr>
                         @endforeach

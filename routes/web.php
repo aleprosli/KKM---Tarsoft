@@ -14,3 +14,5 @@ Route::get('/tempahan/create', [App\Http\Controllers\TempahanController::class, 
 Route::post('/tempahan/store', [App\Http\Controllers\TempahanController::class, 'store'])->name('tempahan.store');
 Route::get('/tempahan/edit/{id}', [App\Http\Controllers\TempahanController::class, 'edit'])->name('tempahan.edit');
 Route::post('/tempahan/update/{id}', [App\Http\Controllers\TempahanController::class, 'update'])->name('tempahan.update');
+
+Route::get('/tempahan/delete/{id}', [App\Http\Controllers\TempahanController::class, 'delete'])->name('tempahan.delete');

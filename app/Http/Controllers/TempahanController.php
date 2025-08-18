@@ -40,4 +40,11 @@ class TempahanController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function delete($id)
+    {
+        $tempahan = Tempahan::find($id);
+        $tempahan->delete();
+        return redirect()->route('home');
+    }
 }
