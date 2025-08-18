@@ -31,15 +31,20 @@
                             <th scope="col">Nama Penuh</th>
                             <th scope="col">Bilik Makmal</th>
                             <th scope="col">Tarikh</th>
+                            <th scope="col">Tindakan</th>
                           </tr>
                         </thead>
                         <tbody>
                         @foreach ($tempahans as $booking)
                           <tr>
-                            <th scope="row">1</th>
+                            <th scope="row">{{ $booking->id }}</th>
                             <td>{{ $booking->nama_penuh }}</td>
                             <td>{{ $booking->bilik_makmal }}</td>
                             <td>{{ $booking->tarikh }}</td>
+                            <td>
+                                <a href="{{ route('tempahan.edit', $booking->id) }}" class="btn btn-warning">Edit</a>
+                                <a href="" class="btn btn-danger">Hapus</a>
+                            </td>
                           </tr>
                         @endforeach
                         </tbody>

@@ -22,4 +22,22 @@ class TempahanController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function edit($id)
+    {
+        $tempahan = Tempahan::find($id);
+        return view('tempahan.edit', compact('tempahan'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $tempahan = Tempahan::find($id);
+        $tempahan->update([
+            'nama_penuh' => $request->nama_penuh,
+            'bilik_makmal' => $request->bilik_makmal,
+            'tarikh' => $request->tarikh
+        ]);
+
+        return redirect()->route('home');
+    }
 }
