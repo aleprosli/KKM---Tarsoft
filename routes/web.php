@@ -16,3 +16,4 @@ Route::get('/tempahan/edit/{id}', [App\Http\Controllers\TempahanController::clas
 Route::post('/tempahan/update/{id}', [App\Http\Controllers\TempahanController::class, 'update'])->name('tempahan.update');
 
 Route::get('/tempahan/delete/{id}', [App\Http\Controllers\TempahanController::class, 'delete'])->name('tempahan.delete');
+Route::get('/user', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
