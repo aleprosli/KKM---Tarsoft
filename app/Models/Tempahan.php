@@ -10,6 +10,7 @@ class Tempahan extends Model
     protected $fillable = [
         'nama_penuh',
         'bilik_makmal',
-        'tarikh'
+        'tarikh',
+        'image'
     ];
 }

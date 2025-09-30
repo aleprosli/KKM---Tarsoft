@@ -8,7 +8,7 @@
                 <div class="card-header">Edit Borang Tempahan Makmal</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('tempahan.update', $tempahan->id) }}">
+                    <form method="POST" action="{{ route('tempahan.update', $tempahan->id) }}" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                           <label for="nama_penuh" class="form-label">Nama Penuh</label>
@@ -21,6 +21,10 @@
                         <div class="mb-3">
                             <label for="bilik_makmal" class="form-label">Tarikh</label>
                             <input type="date" class="form-control" name="tarikh" value="{{ $tempahan->tarikh }}">
+                          </div>
+                          <div class="mb-3">
+                            <label for="image" class="form-label">Gambar</label>
+                            <input type="file" class="form-control" name="image">
                           </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                       </form>

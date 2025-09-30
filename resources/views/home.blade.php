@@ -36,6 +36,7 @@
                             <th scope="col">Nama Penuh</th>
                             <th scope="col">Bilik Makmal</th>
                             <th scope="col">Tarikh</th>
+                            <th scope="col">Gambar</th>
                             <th scope="col">Tindakan</th>
                           </tr>
                         </thead>
@@ -46,6 +47,11 @@
                             <td>{{ $booking->nama_penuh }}</td>
                             <td>{{ $booking->bilik_makmal }}</td>
                             <td>{{ $booking->tarikh }}</td>
+                            @if ($booking->image)
+                            <td><img src="{{ $booking->image }}" alt="Gambar" style="width: 100px; height: 100px;"></td>
+                            @else
+                                <td>-</td>
+                            @endif
                             <td>
                                 <a href="{{ route('tempahan.edit', $booking->id) }}" class="btn btn-warning">Edit</a>
                                 <a href="{{ route('tempahan.delete', $booking->id) }}" class="btn btn-danger" onclick="return confirm('Adakah anda yakin untuk menghapus tempahan ini?')">Hapus</a>
